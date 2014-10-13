@@ -28,6 +28,11 @@ geeconAgendaApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "views/speakerList.html",
             controller: "speakerListController"
         })
+        .state('speaker/{speakerId}', {
+            url: "/speaker/{speakerId}",
+            templateUrl: "views/speaker.html",
+            controller: "speakerController"
+        })
         .state('presentationList', {
             url: "/presentations",
             templateUrl: "views/presentationList.html",

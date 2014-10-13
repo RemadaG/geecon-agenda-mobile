@@ -15,9 +15,8 @@ geeconControllers.controller('presentationController', ['$scope', '$http', '$sta
                     }
                 }).
                 error(function (data, status, headers, config) {
-                    console.warn("Cannot get speaker list!")
+                    console.warn("Cannot get presentation!")
                 });
-
         }
 
         onInit();

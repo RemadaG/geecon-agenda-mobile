@@ -19,3 +19,9 @@
 .center-text {
     text-align: center;
 }
+
+.imgage-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

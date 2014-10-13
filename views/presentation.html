@@ -10,7 +10,7 @@
 <h2>Speaker:</h2>
 <ul ng-repeat="speaker in presentation.speakers">
     <li class="remove-list-dot">
-        <a href="#/speakers">
+        <a href="#/speaker/{{speaker.id}}">
             <img src="{{speaker.photo}}" alt="{{speaker.name}}" class="speaker-img"> <span
                 class="speaker-name">{{speaker.name}}</span>
         </a>
