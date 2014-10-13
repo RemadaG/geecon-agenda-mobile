@@ -2,7 +2,7 @@
 <p ng-bind-html="presentation.summary"></p>
 <h2>Speaker:</h2>
 <ul ng-repeat="speaker in presentation.speakers">
-    <li>
+    <li class="remove-list-dot">
         <a href="#/speakers">
             <img src="{{speaker.photo}}" alt="{{speaker.name}}" class="speaker-img"> <span
                 class="speaker-name">{{speaker.name}}</span>
