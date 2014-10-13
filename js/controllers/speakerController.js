@@ -7,7 +7,6 @@ geeconControllers.controller('speakerController', ['$scope', '$http', '$state', 
         function onInit() {
             $http.get('http://registration.geecon.cz/rest/1/speakers/' + speakerId).
                 success(function (result) {
-                    console.log(result.bio);
                     $scope.speaker = {
                         name: result.name,
                         bio: $sce.trustAsHtml(result.bio),

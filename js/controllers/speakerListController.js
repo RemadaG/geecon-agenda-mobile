@@ -21,10 +21,6 @@ geeconControllers.controller('speakerListController', ['$scope', '$http', '$stat
                 });
         }
 
-        $scope.onPresentationClick = function (presentationUri) {
-            console.log("Redirect do " + presentationUri)
-        }
-
         onInit();
     }
 ]);

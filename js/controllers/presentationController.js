@@ -7,7 +7,6 @@ geeconControllers.controller('presentationController', ['$scope', '$http', '$sta
         function onInit() {
             $http.get('http://registration.geecon.cz/rest/1/presentations/' + presentationId).
                 success(function (result) {
-                    console.log(result);
                     $scope.presentation = {
                         title: result.title,
                         summary: $sce.trustAsHtml(result.summary),
