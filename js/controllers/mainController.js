@@ -1,5 +1,11 @@
-geeconControllers.controller('mainController', ['$scope', '$http',
-    function ($scope, $http) {
-        console.log('hello from main 2')
+geeconControllers.controller('mainController', ['$scope', '$http', '$state',
+    function ($scope, $http, $state) {
+        $scope.onShowAgenda = function () {
+         $state.go('agenda-day-1');
+        };
+
+        $scope.onShowSpeakers = function () {
+            console.log('speakers!');
+        };
     }
 ]);
