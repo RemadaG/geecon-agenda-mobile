@@ -7,7 +7,6 @@ geeconControllers.controller('speakerListController', ['$scope', '$http', '$stat
                 success(function (result) {
                     for (var i in result) {
                         var speaker = result[i];
-                        console.log(speaker);
                         var speakerToAdd = {
                             name: speaker.name,
                             photoUrl: speaker.photo,
