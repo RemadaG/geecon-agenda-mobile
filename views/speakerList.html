@@ -5,13 +5,11 @@
             <span class="speaker-name">{{speaker.name}}</span> - {{speaker.shortBio}}
         </p>
 
-        <p ng-if="speaker.presentations.length > 0">
+        <div ng-if="speaker.presentations.length > 0">
             Presentations:
-        <ul ng-repeat="presentation in speaker.presentations">
-            <li><a href="#/presentation/{{presentation.id}}">{{presentation.title}}</a></li>
-        </ul>
-        </p>
-
+            <ul ng-repeat="presentation in speaker.presentations">
+                <li><a href="#/presentation/{{presentation.id}}">{{presentation.title}}</a></li>
+            </ul>
+        </div>
     </div>
-
 </div>
