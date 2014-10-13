@@ -1,0 +1,11 @@
+.speaker-img {
+    border-radius: 50%;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.speaker-name {
+    font-weight: bold;
+}
+
+.top-buffer { margin-top:20px; }

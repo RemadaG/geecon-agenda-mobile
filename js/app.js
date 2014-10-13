@@ -18,7 +18,7 @@ geeconAgendaApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "views/agenda-day-1.html",
             controller: "agendaController"
         })
-        .state('speakers', {
+        .state('speakerList', {
             url: "/speakers",
             templateUrl: "views/speakerList.html",
             controller: "speakerListController"

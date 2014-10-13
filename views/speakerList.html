@@ -1,1 +1,17 @@
-speakerList.html
+<div class="row top-buffer" ng-repeat="speaker in speakers">
+    <div class="col-xs-4"><img src="{{speaker.photoUrl}}" class="speaker-img" alt="{{speaker.name}}"></div>
+    <div class="col-xs-6">
+        <p>
+            <span class="speaker-name">{{speaker.name}}</span> - {{speaker.shortBio}}
+        </p>
+
+        <p ng-if="speaker.presentations.length > 0">
+            Presentations:
+        <ul ng-repeat="presentation in speaker.presentations">
+            <li><a href="#/presentation/{{presentation.id}}">{{presentation.title}}</a></li>
+        </ul>
+        </p>
+
+    </div>
+
+</div>

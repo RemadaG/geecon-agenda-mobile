@@ -5,7 +5,11 @@ geeconControllers.controller('mainController', ['$scope', '$http', '$state',
         };
 
         $scope.onShowSpeakers = function () {
-            console.log('speakers!');
+            $state.go('speakerList');
+        };
+
+        $scope.onShowPresentations = function () {
+            $state.go('presentationList');
         };
     }
 ]);
