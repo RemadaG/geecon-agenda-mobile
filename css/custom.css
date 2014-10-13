@@ -15,3 +15,7 @@
 .remove-list-dot {
     list-style: none;
 }
+
+.center-text {
+    text-align: center;
+}
