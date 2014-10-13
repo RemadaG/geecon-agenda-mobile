@@ -1,1 +1,11 @@
-MY PRESENTATION
+<h1>{{presentation.title}}</h1>
+<p ng-bind-html="presentation.summary"></p>
+<h2>Speaker:</h2>
+<ul ng-repeat="speaker in presentation.speakers">
+    <li>
+        <a href="#/speakers">
+            <img src="{{speaker.photo}}" alt="{{speaker.name}}" class="speaker-img"> <span
+                class="speaker-name">{{speaker.name}}</span>
+        </a>
+    </li>
+</ul>
