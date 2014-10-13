@@ -20,7 +20,7 @@ geeconAgendaApp.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('speakers', {
             url: "/speakers",
-            templateUrl: "views/speakers.html",
+            templateUrl: "views/speakerList.html",
             controller: "speakerListController"
         });
 });
