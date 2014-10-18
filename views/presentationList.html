@@ -7,7 +7,7 @@
     <li><a href="#/geecoins">GeeCOINS</a></li>
 </ul>
 
-Search: <input ng-model="searchText" placeholder="minimum 3 letters">
+Search: <input ng-model="searchText" placeholder="Search...">
 
 <div class="top-buffer" ng-repeat="presentation in presentations | filter:searchText">
     <h3>{{presentation.title}}</h3>
