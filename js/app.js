@@ -42,5 +42,10 @@ geeconAgendaApp.config(function ($stateProvider, $urlRouterProvider) {
             url: "/presentation/{presentationId}",
             templateUrl: "views/presentation.html",
             controller: "presentationController"
+        })
+        .state('geecoins', {
+            url: "/geecoins",
+            templateUrl: "views/geecoins.html",
+            controller: "geecoinsController"
         });
 });
