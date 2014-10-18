@@ -1,6 +1,7 @@
 var geeconAgendaApp = angular.module("geeconAgendaApp", [
     'ngRoute',
     'ui.router',
+    'ngStorage',
     'geeconControllers'
 ]);
 
