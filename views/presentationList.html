@@ -11,16 +11,40 @@ Search: <input ng-model="searchText" placeholder="Search...">
 
 <div class="top-buffer" ng-repeat="presentation in presentations | filter:searchText">
     <h3>{{presentation.title}}</h3>
-    <ul ng-repeat="speaker in presentation.speakers">
-        <li class="remove-list-dot">
-            <a href="#/speaker/{{speaker.id}}">
-                <img src="{{speaker.photo}}" alt="{{speaker.name}}" class="speaker-img"> <span
-                    class="speaker-name">{{speaker.name}}</span>
-            </a>
-        </li>
-    </ul>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <ul ng-repeat="speaker in presentation.speakers">
+                <li class="remove-list-dot">
+                    <a href="#/speaker/{{speaker.id}}">
+                        <img src="{{speaker.photo}}" alt="{{speaker.name}}" class="speaker-img"> <span
+                            class="speaker-name">{{speaker.name}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <div>
+                <strong>Rate if you liked the presentation:</strong>
+            </div>
+            <div ng-if="!presentation.voted" class="btn-group">
+                <button type="button" class="btn btn-default btn-lg btn-success"><span
+                        class="glyphicon glyphicon-thumbs-up"
+                        ng-click="ratePresentation(1, presentation.id)"></span></button>
+                <button type="button" class="btn btn-default btn-lg btn-warning"><span
+                        class="glyphicon glyphicon-hand-right"
+                        ng-click="ratePresentation(2, presentation.id)"></span></button>
+                <button type="button" class="btn btn-default btn-lg btn-danger"><span
+                        class="glyphicon glyphicon-thumbs-down"
+                        ng-click="ratePresentation(3, presentation.id)"></span></button>
+            </div>
+            <div ng-if="presentation.voted">
+                You have voted. Thank you!
+            </div>
+        </div>
+    </div>
     <p ng-bind-html="presentation.summary"></p>
-    <hr />
+    <hr/>
 </div>
 
 
