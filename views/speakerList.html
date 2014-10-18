@@ -6,7 +6,10 @@
     <li><a href="#/presentations">Presentations</a></li>
     <li><a href="#/geecoins">GeeCOINS</a></li>
 </ul>
-<div class="row top-buffer" ng-repeat="speaker in speakers">
+
+Search: <input ng-model="searchText" placeholder="minimum 3 letters">
+
+<div class="row top-buffer" ng-repeat="speaker in speakers | filter:searchText">
     <div class="col-xs-4"><img src="{{speaker.photoUrl}}" class="speaker-img" alt="{{speaker.name}}"></div>
     <div class="col-xs-6">
         <p>

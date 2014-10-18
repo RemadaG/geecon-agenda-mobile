@@ -1,6 +1,7 @@
 geeconControllers.controller('speakerListController', ['$scope', '$http', '$state',
     function ($scope, $http, $state) {
         $scope.speakers = [];
+        $scope.searchText = "";
 
         function onInit() {
             $http.get('http://registration.geecon.cz/rest/speakers?details=true').
