@@ -37,14 +37,15 @@ geeconControllers.controller('presentationController', ['$scope', '$http', '$sta
 
         $scope.ratePresentation = function (rate, presentationId) {
             var addToArray = true;
-            for (var i = 0; i < $scope.$storage.votedPresentations.length; i++) {
-                if ($scope.$storage.votedPresentations[i] === presentationId) {
+            var votedPresentations = $scope.$storage.votedPresentations;
+            for (var i = 0; i < votedPresentations.length; i++) {
+                if (votedPresentations[i] == presentationId) {
                     addToArray = false;
                     break;
                 }
             }
             if (addToArray) {
-                $scope.$storage.votedPresentations.push(presentationId);
+                votedPresentations.push(presentationId);
             }
             $scope.presentation.voted = true;
         };
