@@ -6,4 +6,23 @@
     <li class="active"><a href="#/presentations">Presentations</a></li>
     <li><a href="#/geecoins">GeeCOINS</a></li>
 </ul>
-TODO PRESENTATION LIST
+
+Search: <input ng-model="searchText" placeholder="minimum 2 letters">
+
+<div class="top-buffer" ng-repeat="presentation in presentations | filter:searchText">
+    <h3>{{presentation.title}}</h3>
+    <ul ng-repeat="speaker in presentation.speakers">
+        <li class="remove-list-dot">
+            <a href="#/speaker/{{speaker.id}}">
+                <img src="{{speaker.photo}}" alt="{{speaker.name}}" class="speaker-img"> <span
+                    class="speaker-name">{{speaker.name}}</span>
+            </a>
+        </li>
+    </ul>
+    <p ng-bind-html="presentation.summary"></p>
+    <hr />
+</div>
+
+
+
+
